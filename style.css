@@ -1,0 +1,464 @@
+/* Importing Fonts */
+@import url('./font-fam.css');
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Avenirltstd roman - 400", "serif";
+}
+
+body {
+    line-height: 1.6;
+}
+
+p {
+    font-family: "Avenirltstd roman - 400", "serif";
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Tiemposheadline - 400 italic", serif;
+}
+
+a {
+    font-style: italic;
+    color: #f4b400 !important;
+}
+
+.home-content {
+    overflow-x: hidden;
+    height: 100vh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+/* Header Styling */
+header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+header .logo img {
+    height: 6rem;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin: 0 15px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #f4b400;
+}
+
+/* Hamburger Icon */
+.hamburger {
+    z-index: 1000;
+}
+
+.hamburger .line,
+.hamburger .line1,
+.hamburger .line3 {
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 8px auto;
+    transition: all 0.2s ease-in-out;
+}
+.hamburger .line1,
+.hamburger .line3 {
+    width: 35px;
+}
+
+.hamburger .line {
+    width: 20px;
+}
+.hamburger:hover {
+    cursor: pointer;
+}
+
+.hamburger.menu-active .line1 {
+    transform: translateY(15px) rotate(45deg);
+}
+
+.hamburger.menu-active .line {
+    opacity: 0;
+}
+
+.hamburger.menu-active .line3 {
+    transform: translateY(-5px) rotate(-45deg);
+}
+
+/* Overlay Menu */
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgba(33, 30, 30, 0.953);
+    overflow-y: hidden;
+    transition: 0.5s;
+}
+
+.menu-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 35%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+    color: #818181;
+}
+
+/* Slide Section */
+.slide {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start;
+    transition: background-color 3s ease-in-out;
+}
+/* curtian */
+
+/* Hero Section */
+#hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    letter-spacing: 2rem;
+}
+
+#hero p {
+    font-size: 2rem;
+    margin: 1rem 0;
+    letter-spacing: 0.3rem;
+}
+#heroend{
+  position:relative;
+  bottom: -15rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem !important;
+  letter-spacing: 1rem !important;
+  color: rgba(255, 255, 255, 0.293);
+  text-align: center;
+}
+
+/* Massage Sections */
+#massages, #massages2, #massages3, #massages4, #massages5 {
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/Couple-massage.jpg'); */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    color: white;
+    background-color: #f9f9f9;
+}
+#massages {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/Couple-massage.jpg');
+}
+#massages2 {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/royal-massage.jpg');
+}
+#massages3 {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/abhyangam-ayurveda-treatment.jpg');
+}
+#massages4 {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/Cupping_Therapy.jpg');
+}
+#massages5 {
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('./media/thai-foot.jpg');
+}
+
+.massage-cont {
+    display: grid;
+    grid-template-rows: repeat(4, 120px);
+    grid-template-columns: repeat(6, 200px);
+    gap: 1rem;
+    margin-top: 7rem;
+    justify-content: center;
+    margin-left: 4rem;
+}
+
+.massage-cont h2 {
+  font-size: 3.7rem;
+}
+
+#massages p {
+  font-size: 15px;
+}
+.massage-cont{
+  /* border: 3px dotted rgb(255, 255, 255); */
+  display: grid;
+  grid-template-rows: repeat(4 , 120px);
+  grid-template-columns: repeat(6,200px);
+  gap: 1rem;
+  margin-top: 7rem;
+  justify-content: center;
+  margin-left: 4rem ;
+  
+}
+.massage-cont >* {
+  /* outline: 2px solid greenyellow; */
+
+}
+.massage-head{
+  grid-row: 1 /1 ;
+  grid-column: 2 /4;
+  /* font-weight: 900; */
+  font-style: italic;
+  
+}
+.sub-head {
+  grid-row: 1 /1 ;
+  grid-column: 4 /6;
+  align-self: flex-end;
+}
+.massage-info{
+  grid-row: 2 / 3 ;
+  grid-column: 3/5;
+  margin-top: 3.5rem;
+}
+.massage-price{
+  grid-row: 3 / 4 ;
+  grid-column: 3 /5;
+  padding-top: 3.5rem;
+}
+.massage-price p, .massage-price-2 p,.massage-price-3{
+  line-height: 1.5rem;
+  font-style: italic;
+  font-family: "tiempos",sans-serif;
+
+}
+.massage-book{
+  grid-row: 4 /4 ;
+  grid-column: 3 /5;
+  margin-top: -0.5rem;
+}
+.massage-info-2{
+  grid-row: 2 / 3 ;
+  grid-column: 4/6;
+  margin-top: .5rem;
+}
+.massage-price-2{
+  grid-row: 3 / 5 ;
+  grid-column: 4 /6;
+  margin-top: 3.5rem;
+}
+.massage-book-2{
+  grid-row: 4 /5 ;
+  grid-column: 4 /5;
+  margin-top: .5rem;
+}
+.sub-head-3{
+  margin-top: 3rem;
+  grid-area: 2/2 /2 /5;
+}
+.massage-info-3{
+  grid-row: 3 / 3 ;
+  grid-column: 2/6;
+  margin-top: .5rem;
+}
+.massage-price-3{
+  grid-row: 4 / 5 ;
+  grid-column: 2 /6;
+  margin-top: 3.5rem;
+}
+.massage-book-3{
+  grid-row: 5 /5 ;
+  grid-column: 2 /5;
+  margin-top: -1.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+footer .social-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 2rem !important;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    header ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    header .logo img {
+        height: 4rem;
+    }
+
+    #hero h1 {
+        font-size: 2.5rem;
+        letter-spacing: 1rem;
+    }
+
+    #hero p {
+        font-size: 1.5rem;
+        letter-spacing: 0.2rem;
+    }
+
+    .massage-cont {
+        grid-template-rows: repeat(5, 100px);
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+        margin: 1rem;
+    }
+
+    .massage-cont > * {
+        margin: 0;
+    }
+
+    .massage-head,
+    .sub-head,
+    .sub-head-3,
+    .massage-info,
+    .massage-info-2,
+    .massage-info-3,
+    .massage-book,
+    .massage-book-2,
+    .massage-book-3,
+    .massage-price,
+    .massage-price-2,
+    .massage-price-3 {
+        grid-column: 1 / 1; /* Full width for mobile */
+    }
+
+    .massage-head {
+        grid-row: 1 / 1;
+    }
+
+    .sub-head,
+    .sub-head-3 {
+        grid-row: 2 / 2;
+    }
+
+    .massage-info,
+    .massage-info-2,
+    .massage-info-3 {
+        grid-row: 3 / 5;
+    }
+
+    .massage-price {
+        grid-row: 5 / 5;
+        padding-top: 1rem;
+    }
+
+    .massage-price-2 {
+        grid-row: 5 / 5;
+        padding-top: 2rem;
+    }
+
+    .massage-price-3 {
+        grid-row: 5 / 5;
+        padding-top: 3rem;
+    }
+
+    .massage-book {
+        grid-row: 6 / 6;
+    }
+
+    .massage-book-2 {
+        grid-row: 6 / 6;
+    }
+
+    .massage-book-3 {
+        grid-row: 6 / 6;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    footer .social-links a {
+        font-size: 14px;
+    }
+    .menu-content {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        top: 15%;
+        width: 100%;
+        text-align: center;
+    }
+}

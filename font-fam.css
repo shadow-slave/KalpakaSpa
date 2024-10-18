@@ -1,0 +1,15 @@
+@font-face {
+    font-family: "tiempos";
+    src: url(./tiempos-font-family/TestTiemposFine-Light-BF66457a5102792.otf);
+}
+@font-face {
+    font-family: "Tiemposheadline - 400 italic";
+    src: url(./tiempos-font-family/TestTiemposHeadline-LightItalic-BF66457a5088153.otf);
+    /* font-weight: 400; */
+    font-style: italic;
+}
+@font-face {
+    font-family: "Avenirltstd roman - 400";
+    src: url(./tiempos-font-family/FontsFree-Net-AvenirLTStd-Roman-1.ttf);
+    font-style: normal;
+}
