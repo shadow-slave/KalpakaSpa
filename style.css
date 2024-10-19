@@ -20,10 +20,25 @@ p {
 h1, h2, h3, h4, h5, h6 {
     font-family: "Tiemposheadline - 400 italic", serif;
 }
-
+.whatsapp{
+  bottom: .5rem;
+  right: .5rem;
+  float: right;
+  z-index: 2000;
+  position: fixed;
+}
+.whatsapp img{
+  width: 3rem;
+}
+.whatsapp img:hover{
+  transition: .1s ease-in-out;
+  width: 3.2rem;
+}
 a {
-    font-style: italic;
-    color: #f4b400 !important;
+    color: #b88702 !important;
+    letter-spacing: .2rem;
+    text-underline-offset: .2rem;
+    font-family: "Tiemposheadline - 400", serif;
 }
 
 .home-content {
@@ -129,30 +144,76 @@ header ul li a:hover {
     overflow-y: hidden;
     transition: 0.5s;
 }
-
-.menu-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 35%;
-    width: 100%;
-    text-align: center;
-    margin-top: 30px;
+.overlay .social{
+  display: flex;
+  opacity: 0; /* Initially hidden */
+  justify-content:center;
+  position: relative;  /* Positioning it relative to the overlay */
+  bottom: 1rem;        /* Adjust the distance from the bottom */
+  width: 100%;         /* Ensure it takes the full width of the overlay */
+  top: 60% ;
+  transform: translateY(-20px);    /* Start slightly above */
+  transition: all 0.5s ease;       /* Smooth transition */
+}
+.social a {
+  font-size: 15px !important;
+  padding: 0 .5rem !important;
 }
 
 .overlay a {
-    padding: 8px;
-    text-decoration: none;
-    font-size: 36px;
-    color: #f1f1f1;
-    display: block;
-    transition: 0.3s;
+  padding: 8px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #f1f1f1 !important;
+  letter-spacing: .25rem;
+  background: linear-gradient(#f4b30067 0 0) 
+    bottom left/
+    var(--underline-width, 0%) 0.125rem
+    no-repeat;
+  display: block;
+  padding: 0;
+  transition: background-size 0.2s linear;
 }
 
 .overlay a:hover,
 .overlay a:focus {
-    color: #818181;
+  --underline-width: 100%;
+}
+
+.menu-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  top: 35%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  opacity: 0; /* Initially hidden */
+  transform: translateY(300px); /* Initially off-screen */
+}
+
+.menu-content.animate,.social.animate{
+  animation: raiseUp 1s ease-out both; /* Trigger the animation when the class is added */
+  animation-delay: .1s; /* You can control delay */
+  transform: translateY(0);        /* Slide to original position */
+}
+
+.social.animate{
+  animation: raiseUp 1s ease-out both; /* Trigger the animation when the class is added */
+  animation-delay: .2s; /* You can control delay */
+}
+
+/* Slide-in Keyframes */
+@keyframes raiseUp {
+from {
+  opacity: 0;
+  transform: translateY(150px); /* Start off-screen */
+}
+to {
+  opacity: 1;
+  transform: translateY(0); /* Slide into view */
+}
 }
 
 /* Slide Section */
@@ -163,9 +224,8 @@ header ul li a:hover {
     justify-content: center;
     align-items: center;
     scroll-snap-align: start;
-    transition: background-color 3s ease-in-out;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 4);
 }
-/* curtian */
 
 /* Hero Section */
 #hero {
@@ -282,10 +342,10 @@ header ul li a:hover {
   grid-column: 3 /5;
   padding-top: 3.5rem;
 }
-.massage-price p, .massage-price-2 p,.massage-price-3{
+.massage-price p, .massage-price-2 p,.massage-price-3 p{
   line-height: 1.5rem;
   font-style: italic;
-  font-family: "tiempos",sans-serif;
+  font-family: "tiempos",sans-serif !important;
 
 }
 .massage-book{
@@ -327,7 +387,19 @@ header ul li a:hover {
   grid-column: 2 /5;
   margin-top: -1.5rem;
 }
-
+.autoShow{
+  animation: autoShowAnimation both;
+  animation-timeline: view(70% 5%) ;
+}
+@keyframes autoShowAnimation {
+  from{
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }to{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
 /* Footer */
 footer {
     background-color: #333;
@@ -353,7 +425,6 @@ footer .social-links a {
         font-size: 14px;
         line-height: 1.4;
     }
-
     header ul {
         flex-direction: column;
         align-items: center;
@@ -461,4 +532,127 @@ footer .social-links a {
         width: 100%;
         text-align: center;
     }
+}
+
+@media (max-width: 480px) {
+  h2 {
+      font-size: 1.8rem;
+  }
+
+  p {
+      font-size: 12px;
+  }
+
+  header ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  header ul li {
+      margin: 8px 0;
+  }
+
+  header .logo img {
+      height: 3rem;
+  }
+
+  #hero h1 {
+      font-size: 2rem;
+      letter-spacing: 0.8rem;
+  }
+
+  #hero p {
+      font-size: 1.2rem;
+      letter-spacing: 0.1rem;
+  }
+
+  .massage-cont {
+      grid-template-columns: 1fr;
+      margin: 1rem;
+  }
+
+  .massage-info, .massage-price, .massage-book {
+      grid-column: 1 / -1;
+  }
+
+  footer {
+      padding: 8px 0;
+  }
+
+  footer .social-links a {
+      font-size: 12px;
+  }
+
+  .menu-content {
+      top: 20%;
+      font-size: 18px;
+  }
+}
+@media (max-height:900px) {
+  .overlay .social {
+    top: 50% !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  h2 {
+      font-size: 2rem;
+  }
+
+  p {
+      font-size: 1rem;
+  }
+
+  header ul {
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+  header ul li {
+      margin: 10px;
+  }
+
+  header .logo img {
+      height: 5rem;
+  }
+
+  #hero h1 {
+      font-size: 3rem;
+      letter-spacing: 1.5rem;
+  }
+
+  #hero p {
+      font-size: 1.8rem;
+      letter-spacing: 0.25rem;
+  }
+  .menu-content {
+      top: 25%;
+  }
+  .massage-cont{
+    margin-top: -5rem;
+    margin-right: 5rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+  .massage-head{
+  grid-row: 1/1;
+  grid-column: 4/6;
+  }
+  .sub-head,.sub-head-3{
+    grid-row: 2/2;
+    grid-column: 4/6;
+  }
+  .massage-info,.massage-info-2,.massage-info-3{
+    grid-row: 3/3;
+    grid-column: 4/6;
+
+  }
+  .massage-price,.massage-price-2,.massage-price-3{
+    grid-row: 4/4;
+    grid-column: 4/6;
+
+  }
+  .massage-book,.massage-book-2,.massage-book-3{
+    grid-row: 5/5;
+    grid-column: 4/6;
+
+  }
 }
