@@ -97,14 +97,27 @@ header ul li a:hover {
 }
 
 /* Hamburger Icon */
+.menu-icon{
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;}
+
+.menu-text{
+  text-decoration: none;
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+  margin-right: .5rem; 
+  transition: display 0.3s ease; 
+}
+.hamburger.menu-active ~ .menu-text{
+  display: none !important;
+}
+
 .hamburger {
     z-index: 1000;
 }
 .hamburger a {
   color: white !important;
-}
-.hamburger.menu-active a{
-  display: none;
 }
 .hamburger .line,
 .hamburger .line1,

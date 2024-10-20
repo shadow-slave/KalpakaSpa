@@ -103,24 +103,33 @@ footer ul li {
 footer ul li a {
     color: #b2bec3;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 16px;    
+    background: linear-gradient(#f4b30067 0 0) 
+    bottom left/
+    var(--underline-width, 0%) 0.125rem
+    no-repeat;
+    display: block;
+    padding: 0;
     transition: color 0.3s ease;
 }
 
-footer ul li a:hover {
-    color: #dfe6e9;
+footer ul li a:hover,
+footer ul li a:focus {
+    --underline-width: 100%;
+    color: #e7b100 !important;
+
 }
 
 footer div a {
     color: #b2bec3;
     text-decoration: none;
-    font-size: 18px;
+    font-size: .8rem;
     margin: 0 15px;
     transition: color 0.3s ease;
 }
 
 footer div a:hover {
-    color: #dfe6e9;
+    color: #dfe6e9 !important;
 }
 
 footer p {
