@@ -1,0 +1,152 @@
+@import url(./style.css);
+@import url(./font-fam.css);
+/* relax-therapies.css */
+
+body {
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.services {
+    padding: 100px 20px;
+}
+
+.massage-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.massage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.massage-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.massage-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.massage-item h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #2d3436;
+}
+
+.massage-item p {
+    font-size: 14px;
+    color: #636e72;
+}
+
+.massage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.massage-price p {
+    margin: 5px 0; /* Reduces the margin between price lines */
+    padding: 0; /* Removes padding */
+    font-size: 1rem; /* Adjust the font size if needed */
+    line-height: 1.2; /* Adjusts the line height for tighter spacing */
+}
+.massage-book {
+    margin-top: 10px; /* Reduces space between the massage-price and book button */
+}
+
+.massage-book a {
+    display: inline-block;
+    padding: .6rem .5rem; /* Adds padding inside the button */
+    border-radius: 5px; /* Rounds the corners */
+}
+
+.massage-book a:hover {
+    transition: 0.1s ease; /* Smooth hover transition */
+    color: #e7b100 !important;
+    text-underline-offset: .35rem;
+}
+
+.massage-item {
+    margin-bottom: 20px; /* Reduces bottom margin between massage items */
+}
+
+footer {
+    background-color: #2d3436;
+    color: #fff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #b2bec3;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+footer ul li a:hover {
+    color: #dfe6e9;
+}
+
+footer div a {
+    color: #b2bec3;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+}
+
+footer div a:hover {
+    color: #dfe6e9;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b2bec3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    nav .menu-content ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .menu-content ul li a {
+        font-size: 18px;
+    }
+    
+    footer ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer div a {
+        font-size: 16px;
+        margin: 10px;
+        display: block;
+    }
+}

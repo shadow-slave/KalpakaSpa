@@ -24,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
   bottom: .5rem;
   right: .5rem;
   float: right;
-  z-index: 2000;
+  z-index: 1000;
   position: fixed;
 }
 .whatsapp img{
@@ -70,6 +70,8 @@ header nav {
 
 header .logo img {
     height: 6rem;
+    position: relative;
+    z-index: 2;
 }
 
 header ul {
@@ -98,12 +100,17 @@ header ul li a:hover {
 .hamburger {
     z-index: 1000;
 }
-
+.hamburger a {
+  color: white !important;
+}
+.hamburger.menu-active a{
+  display: none;
+}
 .hamburger .line,
 .hamburger .line1,
 .hamburger .line3 {
     height: 2px;
-    background-color: #ecf0f1;
+    background-color: #ae8104;
     display: block;
     margin: 8px auto;
     transition: all 0.2s ease-in-out;
@@ -122,6 +129,7 @@ header ul li a:hover {
 
 .hamburger.menu-active .line1 {
     transform: translateY(15px) rotate(45deg);
+    background-color: #f1f1f1;
 }
 
 .hamburger.menu-active .line {
@@ -130,6 +138,8 @@ header ul li a:hover {
 
 .hamburger.menu-active .line3 {
     transform: translateY(-5px) rotate(-45deg);
+    background-color: #f1f1f1;
+
 }
 
 /* Overlay Menu */
@@ -409,11 +419,6 @@ footer {
     margin-top: 40px;
 }
 
-footer .social-links a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
@@ -520,9 +525,6 @@ footer .social-links a {
         padding: 10px 0;
     }
 
-    footer .social-links a {
-        font-size: 14px;
-    }
     .menu-content {
         display: flex;
         align-items: center;
@@ -579,9 +581,6 @@ footer .social-links a {
       padding: 8px 0;
   }
 
-  footer .social-links a {
-      font-size: 12px;
-  }
 
   .menu-content {
       top: 20%;

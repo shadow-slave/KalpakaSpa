@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2d3436;
+}
+
+nav .logo img {
+    width: 150px;
+}
+
+nav .menu-content ul {
+    display: flex;
+    gap: 20px;
+}
+
+nav .menu-content ul li a {
+    color: #dfe6e9;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+nav .menu-content ul li a:hover {
+    color: #81ecec;
+}
+
+.services {
+    padding: 50px 20px;
+    background-color: #ffffff;
+}
+
+.massage-list {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.massage-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.massage-item {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.massage-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.massage-item h3 {
+    font-size: 20px;
+    margin: 15px 0;
+    color: #2d3436;
+}
+
+.massage-item p {
+    font-size: 14px;
+    color: #636e72;
+}
+
+.massage-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    background-color: #2d3436;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer ul li a {
+    color: #b2bec3;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    color: #dfe6e9;
+}
+
+footer div a {
+    color: #b2bec3;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer div a:hover {
+    color: #dfe6e9;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #b2bec3;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav .menu-content ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
