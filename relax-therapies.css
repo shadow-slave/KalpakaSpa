@@ -108,9 +108,9 @@ footer ul li a {
     bottom left/
     var(--underline-width, 0%) 0.125rem
     no-repeat;
-    display: block;
+    display: inline-block;
     padding: 0;
-    transition: color 0.3s ease;
+    transition: color 0.3s ease, background-size 0.3s ease; /* Animate underline smoothly */
 }
 
 footer ul li a:hover,
@@ -157,5 +157,12 @@ footer p {
         font-size: 16px;
         margin: 10px;
         display: block;
+    }
+    
+    footer ul li a:hover,
+    footer ul li a:focus {
+        --underline-: 0;
+        color: #e7b100 !important;
+
     }
 }
