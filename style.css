@@ -115,6 +115,7 @@ header ul li a:hover {
   font-size: 1.4rem;
   margin-right: .5rem; 
   transition: display 0.3s ease; 
+  cursor: default;
 }
 .hamburger.menu-active ~ .menu-text{
   display: none !important;
@@ -188,6 +189,9 @@ header ul li a:hover {
 .social a {
   font-size: 15px !important;
   padding: 0 .5rem !important;
+  font-family: "Avenirltstd roman - 400", "serif";
+  font-style: normal;
+  letter-spacing: .4rem !important;
 }
 
 .overlay a {
