@@ -440,14 +440,16 @@ footer {
     }
 
     p {
-        font-size: 14px;
+        font-size: 1rem !important;
         line-height: 1.4;
     }
     header ul {
         flex-direction: column;
         align-items: center;
     }
-
+    .menu-text{
+      display: none !important;
+    }
     header ul li {
         margin: 10px 0;
     }
@@ -605,6 +607,7 @@ footer {
     top: 50% !important;
   }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   h2 {
       font-size: 2rem;
