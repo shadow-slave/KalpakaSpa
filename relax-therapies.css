@@ -137,7 +137,6 @@ footer p {
     font-size: 14px;
     color: #b2bec3;
 }
-
 /* Responsive */
 @media (max-width: 768px) {
     nav .menu-content ul {
@@ -165,4 +164,8 @@ footer p {
         color: #e7b100 !important;
 
     }
+    .footer-social i{
+        font-size: .9rem;
+    }
+
 }

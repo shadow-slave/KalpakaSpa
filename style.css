@@ -27,12 +27,19 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 1000;
   position: fixed;
 }
-.whatsapp img{
+.whatsapp img,.phone img{
   width: 3rem;
 }
-.whatsapp img:hover{
+.whatsapp img:hover,.phone img:hover{
   transition: .1s ease-in-out;
   width: 3.2rem;
+}
+.phone{
+  bottom: 3.5rem;
+  right: .5rem;
+  float: right;
+  z-index: 1000;
+  position: fixed;
 }
 a {
     color: #b88702 !important;
@@ -432,6 +439,19 @@ footer {
     margin-top: 40px;
 }
 
+.instagram:hover {
+  background: linear-gradient(to right, #833ab4, #fd1d1d, #fcb045) !important; /* Apply the gradient */
+  -webkit-background-clip: text !important; /* Clip the background to the text */
+  background-clip: text !important; 
+  color: transparent !important; /* Make the text color transparent to allow the gradient to show */
+  transition: background 0.3s ease-in-out, color 0.3s ease-in-out !important;
+}
+.facebook:hover {
+  background: linear-gradient(to right, #4267B2, #00C6FF, #0077B5) !important; /* Blue gradient for Facebook */
+  -webkit-background-clip: text !important; /* Clip the background to the text */
+  background-clip: text !important;
+  color: transparent !important; /* Make the text color transparent to allow the gradient to show */
+}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
