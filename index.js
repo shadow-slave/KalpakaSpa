@@ -3,6 +3,8 @@ const navLinks = document.querySelector('.overlay');
 const menuContent = document.querySelector('.menu-content');
 const social = document.querySelector('.social');
 const menuText = document.querySelector('.menu-text');
+const googleReview = document.querySelector(".google-review");
+
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('menu-active'); // Toggle hamburger animation
@@ -14,6 +16,7 @@ hamburger.addEventListener('click', () => {
         menuContent.classList.remove('animate'); 
         social.classList.remove('animate'); 
         menuText.style.display = 'inline';  // Show the previous element
+        googleReview.style.display = 'inline';  //show google reviews
 
     } else {
         navLinks.style.height = '100%'; // Open the menu
@@ -22,6 +25,7 @@ hamburger.addEventListener('click', () => {
         menuContent.classList.add('animate'); 
         social.classList.add('animate'); 
         menuText.style.display = 'none';
+        googleReview.style.display = 'none';
     }
 });
 

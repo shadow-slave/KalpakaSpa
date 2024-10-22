@@ -186,6 +186,7 @@ header ul li a:hover {
   top: 60% ;
   transform: translateY(-20px);    /* Start slightly above */
   transition: all 0.5s ease;       /* Smooth transition */
+  z-index: 1000;
 }
 .social a {
   font-size: 15px !important;
