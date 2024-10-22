@@ -116,6 +116,7 @@ header ul li a:hover {
   margin-right: .5rem; 
   transition: display 0.3s ease; 
   cursor: default;
+  color: #8F2422 !important;
 }
 .hamburger.menu-active ~ .menu-text{
   display: none !important;
@@ -352,7 +353,6 @@ to {
 }
 .massage-cont >* {
   /* outline: 2px solid greenyellow; */
-
 }
 .massage-head{
   grid-row: 1 /1 ;

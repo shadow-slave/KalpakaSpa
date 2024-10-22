@@ -47,7 +47,7 @@ function changeSlide(direction) {
 // Optional: Automatic slide change every 5 seconds
 setInterval(() => {
   changeSlide(1);
-}, 6000);
+}, 5000);
 
 // Initialize the slider
 showSlide(currentSlide);
