@@ -286,6 +286,7 @@ body {
 }
 
 /* Responsive Design */
+
 @media (max-width: 980px){
   body{
     overflow-x: hidden;

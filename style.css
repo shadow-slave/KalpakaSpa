@@ -352,9 +352,9 @@ to {
   margin-left: 4rem ;
   
 }
-.massage-cont >* {
-  /* outline: 2px solid greenyellow; */
-}
+/* .massage-cont >* {
+  outline: 2px solid greenyellow;
+} */
 .massage-head{
   grid-row: 1 /1 ;
   grid-column: 2 /4;
