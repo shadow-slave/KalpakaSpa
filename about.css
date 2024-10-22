@@ -157,11 +157,12 @@ body {
 .featureSlider:hover .item {
   animation-play-state: paused !important;
   filter: grayscale(1) blur(1px);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 .featureSlider:hover .item:hover{
   filter: grayscale(0);
-  transform: translateY(-10px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transform: scale3d(1.025, 1.025, 1.025);
 }
 
 .featureSlider h2{
@@ -247,6 +248,20 @@ body {
 .contact-left button:hover i{
     transform: translateX(3px);
 }
+.contact-right-map{
+  overflow: hidden;
+  padding-bottom: 56%;
+  position: relative;
+  height: 0;
+}
+.contact-right-map iframe{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
 /* Responsive Design */
 @media (max-width: 980px){
   body{
