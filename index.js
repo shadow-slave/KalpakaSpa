@@ -5,6 +5,11 @@ const social = document.querySelector('.social');
 const menuText = document.querySelector('.menu-text');
 const googleReview = document.querySelector(".google-review");
 
+window.onload = function(){
+  document.getElementById("preloader").style.display= "none";
+  document.getElementById("main-content").classList.remove('main-content-hidden');
+
+}
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('menu-active'); // Toggle hamburger animation
