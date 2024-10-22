@@ -176,7 +176,7 @@ body {
 /* COntact FORM */
 
 .contact-container{
-  margin-top: 4rem;
+  margin-top: 8rem;
   height: 50vh;
   display: grid;
   grid-template-columns: 1fr 1fr;
