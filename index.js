@@ -10,6 +10,10 @@ window.onload = function(){
   document.getElementById("main-content").classList.remove('main-content-hidden');
 
 }
+window.addEventListener('load', () => {
+  document.getElementById('preloader').style.display = 'none';
+});
+
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('menu-active'); // Toggle hamburger animation
